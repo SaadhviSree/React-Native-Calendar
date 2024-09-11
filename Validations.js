@@ -20,12 +20,12 @@ const DateValidation = (Str) => {
 const DateRangeValidation = (date1, date2) => {
   const parts1 = date1.split('-')
   const year1 = parseInt(parts1[0], 10)
-  const month1 = parseInt(parts1[1], 10) - 1 // Months are 0-based in JS Date object
+  const month1 = parseInt(parts1[1], 10) - 1 
   const day1 = parseInt(parts1[2], 10)
 
   const parts2 = date2.split('-')
   const year2 = parseInt(parts2[0], 10)
-  const month2 = parseInt(parts2[1], 10) - 1 // Months are 0-based in JS Date object
+  const month2 = parseInt(parts2[1], 10) - 1 
   const day2 = parseInt(parts2[2], 10)
 
   const dateObj1 = new Date(year1, month1, day1)

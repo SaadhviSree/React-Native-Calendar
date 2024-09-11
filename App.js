@@ -1,14 +1,13 @@
-import { StatusBar } from 'expo-status-bar'
-import React from 'react'
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
-import { NavigationContainer } from '@react-navigation/native'
-import { createStackNavigator } from '@react-navigation/stack'
+import React from 'react';
+import { StyleSheet } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
-import CalendarScreen from './CalendarScreen'
-import AddEventScreen from './AddEventScreen'
-import EventListScreen from './EventListScreen'
-import YearViewScreen from './YearViewScreen'
-import ExpandableCalendarScreen from './ExpandableCalendarScreen'
+import CalendarScreen from './CalendarScreen';
+import AddEventScreen from './AddEventScreen';
+import EventListScreen from './EventListScreen';
+import YearViewScreen from './YearViewScreen';
+import EditEventScreen from './EditEventScreen';
 
 const Stack = createStackNavigator()
 
@@ -26,6 +25,7 @@ export default function App() {
         <Stack.Screen name = "Calendar" component={CalendarScreen} options={{headerShown:false}}/>
         <Stack.Screen name = "Event List" component={EventListScreen}/>
         <Stack.Screen name = "Add Event" component={AddEventScreen}/>
+        <Stack.Screen name = "Edit Event" component={EditEventScreen}/>
         <Stack.Screen name = "Year View" component={YearViewScreen}/>
       </Stack.Navigator>
     </NavigationContainer>

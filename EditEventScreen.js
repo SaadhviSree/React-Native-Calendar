@@ -1,12 +1,12 @@
-import React, { useState } from "react"
-import { StyleSheet, View, Text, TextInput, Alert } from "react-native"
-import { Switch } from "react-native-switch"
-import { TouchableOpacity } from "react-native-gesture-handler"
-import { SafeAreaView } from "react-native-safe-area-context"
+import React, { useState } from "react";
+import { StyleSheet, View, Text, TextInput, Alert } from "react-native";
+import { Switch } from "react-native-switch";
+import { TouchableOpacity } from "react-native-gesture-handler";
+import { SafeAreaView } from "react-native-safe-area-context";
 
-import { database } from './firebase' 
-import { ref, push, set } from "firebase/database"
-import { DateRangeValidation, DateValidation, TimeValidation, TimeRangeValidation } from "./Validations"
+import { database } from './firebase' ;
+import { ref, set } from "firebase/database";
+import { DateRangeValidation, DateValidation, TimeValidation, TimeRangeValidation } from "./Validations";
 
 export default function EditEventScreen({route, navigation}){
   const { id } = route.params.event
@@ -55,7 +55,7 @@ export default function EditEventScreen({route, navigation}){
         Alert.alert("Changes Saved!!")
         navigation.goBack()
       } catch (error) {
-        console.error("Error updating event: ", error);
+        console.error("Error updating event: ", error)
         Alert.alert("Error", "Could not update event. Please try again.")
       }
     }
@@ -82,6 +82,7 @@ export default function EditEventScreen({route, navigation}){
     const onChangeFromTime = (time) => handleTimeChange(time, setFromTime, fromTime)
     const onChangeToTime = (time) => handleTimeChange(time,setToTime, toTime)
     console.log(id)
+    
     return(
       <SafeAreaView style={styles.container}> 
       
@@ -241,7 +242,7 @@ export default function EditEventScreen({route, navigation}){
         Alert.alert("Changes Saved!!")
         navigation.goBack()
       } catch (error) {
-        console.error("Error updating event: ", error);
+        console.error("Error updating event: ", error)
         Alert.alert("Error", "Could not update event. Please try again.")
       }
     }
